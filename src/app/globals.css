@@ -31,3 +31,69 @@ body {
   -moz-user-select: none;
   user-select: none;
 }
+
+.skedd-desktop-nav {
+  display: flex;
+}
+
+.skedd-compact-nav-button {
+  display: none;
+}
+
+@media (max-width: 1179px) {
+  .skedd-desktop-nav {
+    display: none;
+  }
+
+  .skedd-compact-nav-button {
+    display: flex;
+  }
+}
+
+@keyframes skedd-primary-cta-breathe {
+  0% {
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+    transform: scale(1);
+  }
+
+  50% {
+    box-shadow: 0 0 18px rgba(255, 255, 255, 0.22);
+    transform: scale(1.01);
+  }
+
+  100% {
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+    transform: scale(1);
+  }
+}
+
+.skedd-primary-cta {
+  animation: skedd-primary-cta-breathe 3.2s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.skedd-primary-cta:hover {
+  box-shadow:
+    0 0 14px rgba(103, 232, 249, 0.65),
+    0 0 34px rgba(103, 232, 249, 0.35),
+    0 0 60px rgba(255, 255, 255, 0.18);
+  border-color: rgba(103, 232, 249, 1);
+  background: rgba(103, 232, 249, 0.10);
+  color: white;
+  transform: scale(1.04);
+  letter-spacing: 0.24em;
+  font-style: italic;
+}
+
+.skedd-primary-cta:active {
+  transform: scale(0.98);
+}
+
+.skedd-primary-cta .skedd-primary-cta-arrow {
+  transition: transform 180ms ease;
+}
+
+.skedd-primary-cta:hover .skedd-primary-cta-arrow {
+  transform: translateX(7px) scale(1.25);
+  color: rgb(103, 232, 249);
+}
