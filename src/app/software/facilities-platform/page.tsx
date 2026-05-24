@@ -10,7 +10,7 @@ const points = [
   "Designed for real maintenance workflows",
 ];
 
-export default function FacilitiesPlatformPage() {
+export default function DeepSiteControlPage() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-[#080a0c] font-mono text-zinc-100">
       <SiteWallpaper />
@@ -22,7 +22,7 @@ export default function FacilitiesPlatformPage() {
           <span className="px-3">/</span>
           <a href="/software" className="hover:text-white">Software</a>
           <span className="px-3">/</span>
-          <span className="text-cyan-300/70">Facilities Platform</span>
+          <span className="text-cyan-300/70">Deep Site Control</span>
         </div>
 
         <div className="max-w-4xl">
@@ -32,13 +32,13 @@ export default function FacilitiesPlatformPage() {
           </div>
 
           <h1 className="text-5xl font-black uppercase tracking-tight text-zinc-100 md:text-7xl">
-            Facilities Platform
+            Deep Site Control
           </h1>
 
           <div className="mt-6 h-px w-48 bg-zinc-500/70" />
 
           <p className="mt-8 max-w-3xl text-lg leading-8 text-zinc-300">
-            A visual facilities management platform built around interactive maps, asset records, layered site context and the day-to-day realities of maintenance work.
+            A visual site intelligence platform for facilities, campuses and complex properties, built around interactive maps, asset records, layered site context and real-world operational knowledge.
           </p>
         </div>
 
@@ -95,10 +95,12 @@ export default function FacilitiesPlatformPage() {
           </p>
 
           <a
-            href="/software/facilities-platform/login"
+            href="https://www.deepsitecontrol.com"
+            target="_blank"
+            rel="noreferrer"
             className="skedd-primary-cta mt-8 inline-flex items-center gap-3 border border-zinc-600/70 px-4 py-3 text-xs uppercase tracking-[0.18em] text-zinc-300 transition hover:border-cyan-200/70 hover:text-white"
           >
-            <span>Coming Soon</span>
+            <span>Visit Deep Site Control</span>
             <ArrowRight className="skedd-primary-cta-arrow h-4 w-4" />
           </a>
         </article>

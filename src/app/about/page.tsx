@@ -197,7 +197,7 @@ export default function AboutPage() {
           </h2>
 
           <p className="mt-8 max-w-4xl text-sm leading-7 text-zinc-400 md:text-base md:leading-8">
-            Skedd Systems is where practical facilities software, scheduling
+            Skedd Systems is where practical software, scheduling and operational systems, scheduling
             tools, game systems, media experiments and odd little creative
             sparks all feed the same machine. Some projects solve immediate
             problems. Some build toward future games. Some start as tiny

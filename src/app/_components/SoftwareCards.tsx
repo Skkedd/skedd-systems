@@ -8,7 +8,7 @@ const projectPanels = [
     description:
       "Practical tools and platforms designed to streamline operations and solve real-world problems.",
     links: [
-      { label: "Facilities Platform", href: "/software/facilities-platform" },
+      { label: "Deep Site Control", href: "/software/deep-site-control" },
       { label: "Summer Scheduler", href: "/software/summer-scheduler" },
     ],
   },

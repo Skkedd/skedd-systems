@@ -61,7 +61,7 @@ function EmbedWindow({
   );
 }
 
-export default function FacilitiesPlatformLoginPage() {
+export default function DeepSCLoginPage() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-[#080a0c] font-mono text-zinc-100">
       <SiteWallpaper />
@@ -77,8 +77,8 @@ export default function FacilitiesPlatformLoginPage() {
             Software
           </a>
           <span className="px-3">/</span>
-          <a href="/software/facilities-platform" className="hover:text-white">
-            Facilities Platform
+          <a href="/software/deep-site-control" className="hover:text-white">
+            Deep Site Control
           </a>
           <span className="px-3">/</span>
           <span className="text-cyan-300/70">Access Portal</span>
@@ -91,7 +91,7 @@ export default function FacilitiesPlatformLoginPage() {
           </div>
 
           <h1 className="text-5xl font-black uppercase tracking-tight text-zinc-100 md:text-7xl">
-            Facilities Access
+            Deep SC Access
           </h1>
 
           <div className="mt-6 h-px w-48 bg-zinc-500/70" />
@@ -126,7 +126,7 @@ export default function FacilitiesPlatformLoginPage() {
             <EmbedWindow
               title="Live Platform"
               status="Login protected - coming soon"
-              description="This window will eventually embed the live facilities platform login. Access beyond the login screen will require authorization."
+              description="This window will eventually embed the live Deep Site Control login. Access beyond the login screen will require authorization."
             />
 
             <EmbedWindow
@@ -172,7 +172,7 @@ export default function FacilitiesPlatformLoginPage() {
           </div>
 
           <a
-            href="/software/facilities-platform"
+            href="/software/deep-site-control"
             className="skedd-primary-cta mt-8 inline-flex items-center gap-3 border border-zinc-600/70 px-4 py-3 text-xs uppercase tracking-[0.18em] text-zinc-300 transition hover:border-cyan-200/70 hover:text-white"
           >
             <ArrowLeft className="skedd-primary-cta-arrow h-4 w-4" />

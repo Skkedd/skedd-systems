@@ -45,7 +45,7 @@ const systemSections = [
     status: "Core direction",
     icon: PencilRuler,
     description:
-      "The Spatial Operations Engine is the editor layer behind the facilities platform. The goal is to build and update operational environments from inside the app instead of relying on one-off external diagrams.",
+      "The Spatial Operations Engine is the editor layer behind Deep Site Control. The goal is to build and update operational environments from inside the app instead of relying on one-off external diagrams.",
     points: [
       "Layer creation and editing",
       "Map and image-based workspaces",
@@ -84,7 +84,7 @@ const systemSections = [
     status: "Long-term infrastructure",
     icon: Cpu,
     description:
-      "The engine starts inside the facilities platform, but the direction is bigger than one app. A reusable spatial operations backbone can eventually support other sites, workflows and operational systems.",
+      "The engine starts inside Deep Site Control, but the direction is bigger than one app. A reusable spatial operations backbone can eventually support other sites, workflows and operational systems.",
     points: [
       "Project-grown engine work",
       "Reusable site-building logic",
@@ -130,7 +130,7 @@ export default function SpatialOperationsEnginePage() {
           <div className="mt-6 h-px w-48 bg-zinc-500/70" />
 
           <p className="mt-8 max-w-3xl text-lg leading-8 text-zinc-300">
-            The authoring engine behind the facilities platform, built to turn
+            The authoring engine behind Deep Site Control, built to turn
             maps, images, assets, geometry and operational knowledge into a
             connected working environment.
           </p>

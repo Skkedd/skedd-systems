@@ -15,10 +15,10 @@ import SiteWallpaper from "../_components/SiteWallpaper";
 
 const softwareSystems = [
   {
-    title: "Facilities Platform",
+    title: "Deep Site Control",
     status: "In active development",
     icon: MapPinned,
-    href: "/software/facilities-platform",
+    href: "/software/deep-site-control",
     description:
       "A visual facilities management platform built around interactive site maps, layered building views, equipment records, photos, notes, shutoffs and real maintenance workflows.",
     points: [
@@ -34,7 +34,7 @@ const softwareSystems = [
     icon: PencilRuler,
     href: "/software/spatial-operations-engine",
     description:
-      "The facilities platform is also becoming an editor-driven software engine, where environments, layers, assets and operational context can be built and updated from inside the app.",
+      "Deep Site Control is also becoming an editor-driven software engine, where environments, layers, assets and operational context can be built and updated from inside the app.",
     points: [
       "In-app environment authoring",
       "Layer and asset editing",
@@ -193,7 +193,7 @@ export default function SoftwarePage() {
 
           <p style={{ maxWidth: "950px" }}>
             Skedd software grows by embedding engine work inside real products
-            first. The facilities platform shapes the spatial operations
+            first. Deep Site Control shapes the spatial operations
             engine, the scheduler and facilities workflows shape the time engine
             and each mature piece can later become reusable infrastructure
             across the wider Skedd ecosystem.
