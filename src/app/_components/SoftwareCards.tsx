@@ -33,7 +33,10 @@ const projectPanels = [
     icon: Info,
     description:
       "Skedd Systems is an independent studio focused on useful systems and original creative projects.",
-    links: [{ label: "Learn More", href: "/about" }],
+    links: [
+      { label: "Learn More", href: "/about" },
+      { label: "itch.io Hub", href: "https://skeddsystems.itch.io/" },
+    ],
   },
 ];
 

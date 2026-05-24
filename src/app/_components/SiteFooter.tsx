@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Mail } from "lucide-react";
+import { Gamepad2, Mail } from "lucide-react";
 import skeddLogo from "@/assets/homepage/SkeddSystems.png";
 
 export default function SiteFooter() {
@@ -18,14 +18,27 @@ export default function SiteFooter() {
           <span>© 2025 Skedd Systems. All rights reserved.</span>
         </div>
 
-        <a
-          href="mailto:info@skeddsystems.com"
-          title="Send an email to info@skeddsystems.com"
-          aria-label="Send an email to info@skeddsystems.com"
-          className="skedd-primary-cta flex h-9 w-9 items-center justify-center rounded-full border border-zinc-700/60 text-zinc-500 transition hover:border-white hover:text-white"
-        >
-          <Mail className="h-5 w-5" />
-        </a>
+        <div className="flex items-center gap-3">
+          <a
+            href="https://skeddsystems.itch.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Visit Skedd Systems on itch.io"
+            aria-label="Visit Skedd Systems on itch.io"
+            className="skedd-primary-cta flex h-9 w-9 items-center justify-center rounded-full border border-zinc-700/60 text-zinc-500 transition hover:border-white hover:text-white"
+          >
+            <Gamepad2 className="h-5 w-5" />
+          </a>
+
+          <a
+            href="mailto:info@skeddsystems.com"
+            title="Send an email to info@skeddsystems.com"
+            aria-label="Send an email to info@skeddsystems.com"
+            className="skedd-primary-cta flex h-9 w-9 items-center justify-center rounded-full border border-zinc-700/60 text-zinc-500 transition hover:border-white hover:text-white"
+          >
+            <Mail className="h-5 w-5" />
+          </a>
+        </div>
       </div>
     </footer>
   );

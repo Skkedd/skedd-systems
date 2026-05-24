@@ -2,8 +2,10 @@
 
 import {
   Cpu,
+  ExternalLink,
   Maximize2,
   MonitorPlay,
+  Play,
   Route,
   ShieldCheck,
   Sparkles,
@@ -16,10 +18,20 @@ import SiteFooter from "../../_components/SiteFooter";
 import SiteHeader from "../../_components/SiteHeader";
 import SiteWallpaper from "../../_components/SiteWallpaper";
 
-import systemsAtWorkImage from "@/assets/skedgine/Systems_at_Work.png";
-import debugChaosImage from "@/assets/skedgine/Debug_Chaos.png";
-import debugWarpsImage from "@/assets/skedgine/Debug_Warps.png";
-import firstNpcEnemyImage from "@/assets/skedgine/First_NPC_Enemy.png";
+import systems2Image from "@/assets/skedgine/skedgine-systems2.png";
+import systemsInActionImage from "@/assets/skedgine/skedgine-systems-in-action.png";
+import enemiesImage from "@/assets/skedgine/skedgine-enemies.png";
+import warpsImage from "@/assets/skedgine/skedgine-warps.png";
+import itemsImage from "@/assets/skedgine/skedgine-items.png";
+import routesImage from "@/assets/skedgine/skedgine-routs.png";
+import presentsImage from "@/assets/skedgine/skedgine-presents.png";
+import partiesImage from "@/assets/skedgine/skedgine-parties.png";
+import npcsImage from "@/assets/skedgine/skedgine-npcs.png";
+import diagnosticsImage from "@/assets/skedgine/skedgine-diagnostics.png";
+import cheatMenuImage from "@/assets/skedgine/skedgine-cheat-menu.png";
+import itemCatalogImage from "@/assets/skedgine/skedgine-item-catalog.png";
+import jsonImage from "@/assets/skedgine/skedgine-json.png";
+import eventTabsImage from "@/assets/skedgine/skedgine-event-tabs.png";
 
 type GalleryItem = {
   title: string;
@@ -27,30 +39,92 @@ type GalleryItem = {
   description: string;
 };
 
+const skedginePreviewUrl = "https://youtu.be/-oOqnh3yct8";
+
 const galleryItems: GalleryItem[] = [
   {
     title: "Systems at Work",
-    image: systemsAtWorkImage,
+    image: systems2Image,
     description:
       "Editor overlays, routes, warps, actors and diagnostic information running together inside the same world view.",
   },
   {
-    title: "Debug Warps",
-    image: debugWarpsImage,
+    title: "Enemy Framework",
+    image: enemiesImage,
     description:
-      "Warp points, landing markers and route-style debug visuals used to understand how the world connects.",
+      "Enemy placement, spawn-zone setup and early hostile actor behavior exposed through the editor layer.",
   },
   {
-    title: "Debug Chaos",
-    image: debugChaosImage,
+    title: "Warp Logic",
+    image: warpsImage,
     description:
-      "Enemy spawn zones, actor diagnostics and early debug overlays showing the engine underneath the game.",
+      "Warp points, landing markers and linked return behavior used to connect maps and world spaces.",
   },
   {
-    title: "First NPC / Enemy",
-    image: firstNpcEnemyImage,
+    title: "Item Tools",
+    image: itemsImage,
     description:
-      "Early actor placement and behavior testing with NPC and enemy systems visible in-world.",
+      "Item creation tools and preview panels used to build reusable equipment, objects and rewards.",
+  },
+  {
+    title: "Route Editing",
+    image: routesImage,
+    description:
+      "Route points, corridors and path tools for future NPC schedules, movement logic and world simulation.",
+  },
+  {
+    title: "World Objects",
+    image: presentsImage,
+    description:
+      "Placeable object tools for presents, pickups and interactive world items inside the editor.",
+  },
+  {
+    title: "Party Framework",
+    image: partiesImage,
+    description:
+      "Playable actor tooling for roster, definitions, timeline planning and future battle previews.",
+  },
+  {
+    title: "NPC Tools",
+    image: npcsImage,
+    description:
+      "NPC placement, preview and context tooling for static and zone-based actor workflows.",
+  },
+  {
+    title: "Diagnostics",
+    image: diagnosticsImage,
+    description:
+      "Runtime health panels used to watch enemy, warp and NPC systems while the world is running.",
+  },
+  {
+    title: "Dev Utilities",
+    image: cheatMenuImage,
+    description:
+      "Developer utility menus for opening tools, testing systems and controlling editor visibility.",
+  },
+  {
+    title: "Catalog Systems",
+    image: itemCatalogImage,
+    description:
+      "A broader item catalog view for organizing definitions, categories, stats and future item rules.",
+  },
+  {
+    title: "Data Driven Core",
+    image: jsonImage,
+    description:
+      "World data, warps, spawns and content structure stored in reusable data files instead of hardcoded one-offs.",
+  },
+  {
+    title: "Event Tabs",
+    image: eventTabsImage,
+    description:
+      "Early event-facing tabs for dialogue, cutscenes, audio, story events and ability systems.",
+  },
+  {
+    title: "Systems in Action",
+    image: systemsInActionImage,
+    description:
+      "A busy engine view showing multiple editor systems layered over the running game world.",
   },
 ];
 
@@ -132,17 +206,18 @@ export default function SkedginePage() {
 
       <section className="relative z-10 mx-auto max-w-[1500px] px-4 pb-20 pt-16 md:px-8 md:pt-24">
         <div className="mb-8 text-xs uppercase tracking-[0.22em] text-zinc-500">
-            <a href="/" className="hover:text-white">
-                Home
-            </a>
-            <span className="px-3">/</span>
-            <a href="/games" className="hover:text-white">
-                Games
-            </a>
-            <span className="px-3">/</span>
-            <span className="text-cyan-300/70">Skedgine</span>
-            </div>
-                    <div className="max-w-4xl">
+          <a href="/" className="hover:text-white">
+            Home
+          </a>
+          <span className="px-3">/</span>
+          <a href="/games" className="hover:text-white">
+            Games
+          </a>
+          <span className="px-3">/</span>
+          <span className="text-cyan-300/70">Skedgine</span>
+        </div>
+
+        <div className="max-w-4xl">
           <div className="mb-5 flex items-center gap-4 text-xs uppercase tracking-[0.28em] text-cyan-300/70">
             <Cpu className="h-5 w-5" />
             <span>Skedd Systems Games / Skedgine</span>
@@ -171,6 +246,46 @@ export default function SkedginePage() {
             <span>Visual Engine Notes</span>
           </div>
 
+          <a
+            href={skedginePreviewUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="group mb-8 grid gap-5 border border-cyan-300/30 bg-black/35 p-4 transition hover:border-cyan-200/70 hover:bg-white/[0.04] md:grid-cols-[420px_minmax(0,1fr)]"
+          >
+            <div className="relative overflow-hidden border border-zinc-600/60 bg-black/50">
+              <Image
+                src={systems2Image}
+                alt="Skedgine In Motion"
+                className="h-full w-full object-cover transition duration-300 group-hover:scale-105 group-hover:opacity-90"
+              />
+
+              <div className="absolute inset-0 flex items-center justify-center bg-black/20">
+                <div className="flex h-16 w-16 items-center justify-center rounded-full border border-cyan-200/60 bg-black/70 text-cyan-100">
+                  <Play className="ml-1 h-8 w-8" />
+                </div>
+              </div>
+            </div>
+
+            <div className="flex flex-col justify-center">
+              <div className="mb-4 flex items-center gap-3 text-[10px] uppercase tracking-[0.22em] text-cyan-300/70">
+                <ExternalLink className="h-4 w-4" />
+                <span>Featured Preview Video</span>
+              </div>
+
+              <h2 className="text-2xl uppercase tracking-[0.14em] text-zinc-100">
+                Skedgine In Motion
+              </h2>
+
+              <p className="mt-4 max-w-2xl text-sm leading-7 text-zinc-400">
+                Early runtime footage showing engine systems, debug tooling, world interaction and evolving editor infrastructure.
+              </p>
+
+              <div className="mt-6 text-xs uppercase tracking-[0.18em] text-cyan-200/80">
+                Watch Preview
+              </div>
+            </div>
+          </a>
+
           <div
             style={{
               overflowX: "auto",
@@ -182,7 +297,7 @@ export default function SkedginePage() {
               style={{
                 display: "grid",
                 gridAutoFlow: "column",
-                gridTemplateRows: "repeat(2, 190px)",
+                gridTemplateRows: "repeat(3, 190px)",
                 gridAutoColumns: "190px",
                 gap: "18px",
                 width: "max-content",
@@ -328,27 +443,27 @@ export default function SkedginePage() {
             </div>
 
             <div
+              style={{
+                width: "80vw",
+                maxWidth: "1100px",
+                maxHeight: "70vh",
+                margin: "0 auto",
+                overflow: "hidden",
+              }}
+              className="border border-zinc-600/60 bg-black/70"
+            >
+              <Image
+                src={activeImage.image}
+                alt={activeImage.title}
                 style={{
-                    width: "80vw",
-                    maxWidth: "1100px",
-                    maxHeight: "70vh",
-                    margin: "0 auto",
-                    overflow: "hidden",
+                  width: "100%",
+                  height: "auto",
+                  maxHeight: "70vh",
+                  objectFit: "contain",
+                  display: "block",
                 }}
-                className="border border-zinc-600/60 bg-black/70"
-                >
-                <Image
-                    src={activeImage.image}
-                    alt={activeImage.title}
-                    style={{
-                    width: "100%",
-                    height: "auto",
-                    maxHeight: "70vh",
-                    objectFit: "contain",
-                    display: "block",
-                    }}
-                />
-                </div>
+              />
+            </div>
           </div>
         </div>
       )}
