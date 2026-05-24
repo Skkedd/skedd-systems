@@ -2,10 +2,8 @@
 
 import {
   Cpu,
-  ExternalLink,
   Maximize2,
   MonitorPlay,
-  Play,
   Route,
   ShieldCheck,
   Sparkles,
@@ -39,7 +37,7 @@ type GalleryItem = {
   description: string;
 };
 
-const skedginePreviewUrl = "https://youtu.be/-oOqnh3yct8";
+const skedginePreviewEmbedUrl = "https://www.youtube.com/embed/-oOqnh3yct8";
 
 const galleryItems: GalleryItem[] = [
   {
@@ -246,29 +244,20 @@ export default function SkedginePage() {
             <span>Visual Engine Notes</span>
           </div>
 
-          <a
-            href={skedginePreviewUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="group mb-8 grid gap-5 border border-cyan-300/30 bg-black/35 p-4 transition hover:border-cyan-200/70 hover:bg-white/[0.04] md:grid-cols-[420px_minmax(0,1fr)]"
-          >
-            <div className="relative overflow-hidden border border-zinc-600/60 bg-black/50">
-              <Image
-                src={systems2Image}
-                alt="Skedgine In Motion"
-                className="h-full w-full object-cover transition duration-300 group-hover:scale-105 group-hover:opacity-90"
+          <div className="mb-8 grid gap-5 border border-cyan-300/30 bg-black/35 p-4 md:grid-cols-[minmax(0,560px)_minmax(0,1fr)]">
+            <div className="relative aspect-video overflow-hidden border border-zinc-600/60 bg-black/50">
+              <iframe
+                className="absolute inset-0 h-full w-full"
+                src={skedginePreviewEmbedUrl}
+                title="Skedgine In Motion"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
               />
-
-              <div className="absolute inset-0 flex items-center justify-center bg-black/20">
-                <div className="flex h-16 w-16 items-center justify-center rounded-full border border-cyan-200/60 bg-black/70 text-cyan-100">
-                  <Play className="ml-1 h-8 w-8" />
-                </div>
-              </div>
             </div>
 
             <div className="flex flex-col justify-center">
               <div className="mb-4 flex items-center gap-3 text-[10px] uppercase tracking-[0.22em] text-cyan-300/70">
-                <ExternalLink className="h-4 w-4" />
+                <MonitorPlay className="h-4 w-4" />
                 <span>Featured Preview Video</span>
               </div>
 
@@ -279,12 +268,8 @@ export default function SkedginePage() {
               <p className="mt-4 max-w-2xl text-sm leading-7 text-zinc-400">
                 Early runtime footage showing engine systems, debug tooling, world interaction and evolving editor infrastructure.
               </p>
-
-              <div className="mt-6 text-xs uppercase tracking-[0.18em] text-cyan-200/80">
-                Watch Preview
-              </div>
             </div>
-          </a>
+          </div>
 
           <div
             style={{
