@@ -1,5 +1,7 @@
 import {
   ArrowRight,
+  Building2,
+  Gamepad2,
   Mail,
   MessageSquare,
   Send,
@@ -12,18 +14,28 @@ import SiteWallpaper from "../_components/SiteWallpaper";
 
 const contactCards = [
   {
-    title: "General Contact",
+    title: "Skedd Systems",
     email: "info@skeddsystems.com",
-    label: "Studio / Software / General",
+    label: "Company / Studio / General",
     description:
-      "For Skedd Systems, software projects, studio questions, business inquiries and general messages.",
+      "For Skedd Systems, business inquiries, software projects, studio questions and general messages.",
+    icon: Building2,
   },
   {
-    title: "Valmore Contact",
+    title: "Deep Site Control",
+    email: "info@deepsitecontrol.com",
+    label: "Facilities / SaaS / Demos",
+    description:
+      "For Deep Site Control product questions, facilities platform inquiries, demo requests and customer conversations.",
+    icon: ShieldCheck,
+  },
+  {
+    title: "Valmore",
     email: "info@playvalmore.com",
-    label: "Games / Valmore / Media",
+    label: "Games / Media / Feedback",
     description:
       "For Valmore, game-related questions, media, feedback and project-specific messages.",
+    icon: Gamepad2,
   },
 ];
 
@@ -47,9 +59,8 @@ export default function ContactPage() {
           <div className="mt-6 h-px w-48 bg-zinc-500/70" />
 
           <p className="mt-8 max-w-3xl text-lg leading-8 text-zinc-300">
-            Reach the right inbox for Skedd Systems, software work, Valmore or
-            general project questions without creating five separate contact
-            portals purely to annoy everyone.
+            Reach the right inbox for Skedd Systems, Deep Site Control or
+            Valmore without wandering through a tiny corporate maze.
           </p>
         </div>
 
@@ -63,52 +74,57 @@ export default function ContactPage() {
           </div>
 
           <h2 className="text-3xl font-black uppercase tracking-tight text-zinc-100 md:text-5xl">
-            Two inboxes, no maze
+            Three inboxes, one ecosystem
           </h2>
 
           <div className="mt-6 h-px w-40 bg-zinc-600/80" />
 
           <p className="mt-8 max-w-4xl text-sm leading-7 text-zinc-400 md:text-base md:leading-8">
-            Use the general Skedd address for studio, software and business
-            questions. Use the Valmore address for game-specific messages,
-            media, feedback or anything tied directly to that project.
+            Use Skedd Systems for company, studio and general software
+            messages. Use Deep Site Control for facilities platform questions,
+            demos and SaaS conversations. Use Valmore for game-specific
+            feedback, media and project messages.
           </p>
         </section>
 
-        <div className="mt-16 grid gap-6 lg:grid-cols-2">
-          {contactCards.map((card) => (
-            <article
-              key={card.email}
-              className="border border-zinc-500/35 bg-black/30 p-7 backdrop-blur-sm transition hover:border-cyan-200/50 hover:bg-white/[0.04]"
-            >
-              <Mail className="mb-6 h-12 w-12 text-zinc-200" />
+        <div className="mt-16 grid gap-6 lg:grid-cols-3">
+          {contactCards.map((card) => {
+            const Icon = card.icon;
 
-              <div className="mb-5 inline-flex border border-cyan-300/30 px-3 py-1 text-[10px] uppercase tracking-[0.2em] text-cyan-200/80">
-                {card.label}
-              </div>
-
-              <h2 className="text-2xl uppercase tracking-[0.14em] text-zinc-100">
-                {card.title}
-              </h2>
-
-              <p className="mt-6 min-h-[96px] text-sm leading-7 text-zinc-400">
-                {card.description}
-              </p>
-
-              <a
-                href={`mailto:${card.email}`}
-                className="skedd-primary-cta group mt-8 flex items-center justify-between border-t border-zinc-700/70 pt-5 text-sm text-zinc-300 transition hover:text-white"
+            return (
+              <article
+                key={card.email}
+                className="border border-zinc-500/35 bg-black/30 p-7 backdrop-blur-sm transition hover:border-cyan-200/50 hover:bg-white/[0.04]"
               >
-                <span>{card.email}</span>
-                <Send className="h-4 w-4 transition group-hover:translate-x-1" />
-              </a>
+                <Icon className="mb-6 h-12 w-12 text-zinc-200" />
 
-              <div className="mt-5 flex items-center gap-3 text-xs uppercase tracking-[0.18em] text-cyan-200/60">
-                <ShieldCheck className="h-4 w-4" />
-                <span>Routes to one managed inbox</span>
-              </div>
-            </article>
-          ))}
+                <div className="mb-5 inline-flex border border-cyan-300/30 px-3 py-1 text-[10px] uppercase tracking-[0.2em] text-cyan-200/80">
+                  {card.label}
+                </div>
+
+                <h2 className="text-2xl uppercase tracking-[0.14em] text-zinc-100">
+                  {card.title}
+                </h2>
+
+                <p className="mt-6 min-h-[120px] text-sm leading-7 text-zinc-400">
+                  {card.description}
+                </p>
+
+                <a
+                  href={`mailto:${card.email}`}
+                  className="skedd-primary-cta group mt-8 flex items-center justify-between border-t border-zinc-700/70 pt-5 text-sm text-zinc-300 transition hover:text-white"
+                >
+                  <span>{card.email}</span>
+                  <Send className="h-4 w-4 transition group-hover:translate-x-1" />
+                </a>
+
+                <div className="mt-5 flex items-center gap-3 text-xs uppercase tracking-[0.18em] text-cyan-200/60">
+                  <Mail className="h-4 w-4" />
+                  <span>Routes to the right project lane</span>
+                </div>
+              </article>
+            );
+          })}
         </div>
 
         <section
@@ -121,14 +137,14 @@ export default function ContactPage() {
           </div>
 
           <h2 className="max-w-4xl text-3xl font-black uppercase tracking-tight text-zinc-100 md:text-5xl">
-            If it is not Valmore-specific, send it to Skedd
+            Pick the project, send the message
           </h2>
 
           <p className="mt-8 max-w-4xl text-sm leading-7 text-zinc-400 md:text-base md:leading-8">
-            The Skedd inbox is the main route for software, systems, studio work
-            and general questions. The Valmore inbox keeps game-specific
-            messages clean so that feedback, media and project communication do
-            not get buried under everything else.
+            If the message is about the company, software work or something
+            broad, send it to Skedd Systems. If it is about facilities maps,
+            demos or product access, send it to Deep Site Control. If it is
+            about the game, send it to Valmore.
           </p>
 
           <a
